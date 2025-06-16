@@ -1,0 +1,13 @@
+on:
+  pull_request_target:
+
+permissions: read-all
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    env:
+      FLAG: ${{ secrets.FLAG }}
+    steps:
+      - run: echo ${{ github.head_ref }}
+    
